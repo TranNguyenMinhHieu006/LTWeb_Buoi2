@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import murach.business.Survey;
 import murach.business.User;
 //import murach.data.UserDB;
 
@@ -30,12 +31,16 @@ public class EmailListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
+            String dateOfBirth = request.getParameter("dateOfBirth");
             String heardFrom = request.getParameter("heardFrom");
+            String contactVia = request.getParameter("contactVia");
 
-            User user = new User(firstName, lastName, email, heardFrom);
+            User user = new User(firstName, lastName, email, dateOfBirth);
+            Survey survey = new Survey(heardFrom, contactVia);
 //            UserDB.insert(user);
 
             request.setAttribute("user", user);
+            request.setAttribute("survey", survey);
             url = "/thanks.jsp";
         }
 

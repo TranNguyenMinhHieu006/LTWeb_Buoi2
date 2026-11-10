@@ -6,21 +6,20 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String heardFrom;
+    private String dateOfBirth;
 
     public User() {
         firstName = "";
         lastName = "";
         email = "";
-        heardFrom ="";
+        dateOfBirth = "";
     }
 
-
-    public User(String firstName, String lastName, String email, String heardFrom) {
+    public User(String firstName, String lastName, String email, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.heardFrom = heardFrom;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -47,11 +46,11 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String getHeardFrom() {
-        return heardFrom;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setHeardFrom(String heardFrom) {
-        this.heardFrom = heardFrom;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
