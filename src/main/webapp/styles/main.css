@@ -15,7 +15,7 @@ label {
     width: 15em;
     margin-bottom: 0.5em;
 }
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="date"] {
     width: 15em;
     margin-left: 0.5em;
     margin-bottom: 0.5em;

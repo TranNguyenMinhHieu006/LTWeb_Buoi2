@@ -16,6 +16,8 @@
     <span>${user.firstName}</span><br>
     <label>Last Name:</label>
     <span>${user.lastName}</span><br>
+    <label>Date of birth:</label>
+    <span>${user.dateOfBirth}</span><br>
     <label>I want to hear about:</label>
     <span>${survey.heardFrom}</span><br>
     <label>Receive announcements?</label>
