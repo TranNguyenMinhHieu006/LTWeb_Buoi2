@@ -6,17 +6,21 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
+    private String heardFrom;
 
     public User() {
         firstName = "";
         lastName = "";
         email = "";
+        heardFrom ="";
     }
 
-    public User(String firstName, String lastName, String email) {
+
+    public User(String firstName, String lastName, String email, String heardFrom) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.heardFrom = heardFrom;
     }
 
     public String getFirstName() {
@@ -41,5 +45,13 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getHeardFrom() {
+        return heardFrom;
+    }
+
+    public void setHeardFrom(String heardFrom) {
+        this.heardFrom = heardFrom;
     }
 }

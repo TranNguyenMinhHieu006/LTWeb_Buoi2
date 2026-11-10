@@ -16,6 +16,12 @@
     <span>${user.firstName}</span><br>
     <label>Last Name:</label>
     <span>${user.lastName}</span><br>
+    <label>I want to hear about:</label>
+    <span>${user.heardFrom}</span><br>
+    <label>Receive announcements?</label>
+    <span></span><br>
+    <label>Contact me by:</label>
+    <span></span><br>
 
     <p>To enter another email address, click on the Back
        button in your browser or the Return button shown
