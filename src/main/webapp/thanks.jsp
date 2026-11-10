@@ -19,7 +19,7 @@
     <label>I want to hear about:</label>
     <span>${survey.heardFrom}</span><br>
     <label>Receive announcements?</label>
-    <span></span><br>
+    <span>${survey.receiveAnnouncements}</span><br>
     <label>Contact me by:</label>
     <span>${survey.contactVia}</span><br>
 

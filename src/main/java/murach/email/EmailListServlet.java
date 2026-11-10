@@ -34,9 +34,21 @@ public class EmailListServlet extends HttpServlet {
             String dateOfBirth = request.getParameter("dateOfBirth");
             String heardFrom = request.getParameter("heardFrom");
             String contactVia = request.getParameter("contactVia");
+            String receiveAnnouncements = request.getParameter("wantsUpdates");
+            String emailOK = request.getParameter("emailOK");
+
+            if (receiveAnnouncements == null) {
+                receiveAnnouncements = "No";
+            }
+
+            if ("Yes".equals(emailOK) && "Yes".equals(receiveAnnouncements)) {
+                receiveAnnouncements = "Yes and Email me";
+            } else if ("Yes".equals(emailOK) && "No".equals(receiveAnnouncements)) {
+                receiveAnnouncements = "I don't like it but email me anyways";
+            }
 
             User user = new User(firstName, lastName, email, dateOfBirth);
-            Survey survey = new Survey(heardFrom, contactVia);
+            Survey survey = new Survey(heardFrom, contactVia, receiveAnnouncements, emailOK);
 //            UserDB.insert(user);
 
             request.setAttribute("user", user);
